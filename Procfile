@@ -1,1 +1,1 @@
-web: gunicornmealsrating.wsgi --log-file -
+web: gunicornproject.wsgi --log-file -
