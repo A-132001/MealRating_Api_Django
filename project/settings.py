@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-bj_j+tryq)ys2@r-zw)5)unxia(+e6v=z()6m%-3n!rnm14t!*
 SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
-
+ALLOWED_HOSTS = ['127.0.0.1','.localhost', 'mealsrating.herokuapp.com]
 ALLOWED_HOSTS = []
 
 
@@ -135,6 +135,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-ALLOWED_HOSTS = ['127.0.0.1','.localhost', 'mealsrating.herokuapp.com']
