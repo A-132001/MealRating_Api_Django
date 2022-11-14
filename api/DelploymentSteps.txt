@@ -45,17 +45,17 @@ Heroku > Create new App > meal-rater
         psycopg2
     * touch Procfile
         Procfile >
-            web: gunicorn mealrate.wsgi --log-file -
+            web: gunicorn project.wsgi --log-file -
     * touch runtime.txt
         runtime > 
             python-3.8.5
     * allowed hosts @settings 
-        ALLOWED_HOSTS = ['127.0.0.1','.localhost', 'mealraterer.herokuapp.com]
+        ALLOWED_HOSTS = ['127.0.0.1','.localhost', 'mealsrating.herokuapp.com]
     * remove the .env from .ignore 
     
     * deploy code to heroku >> use git automatice after push 
 
     * after deploy 
-        heroku git:remote -a mealrater
+        heroku git:remote -a mealsrating
         heroku run python3 manage.py migrate 
         heroku run python3 manage.py createsuperuser
