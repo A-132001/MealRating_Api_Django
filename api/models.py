@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator,MaxValueValidator
 
 class MealModel(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=500)
     def __str__(self):
@@ -26,6 +27,7 @@ class MealModel(models.Model):
         
 
 class RateModel(models.Model):
+    id = models.AutoField(primary_key=True)
     meal = models.ForeignKey(MealModel,on_delete=models.CASCADE)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     stars = models.IntegerField(validators=[MinValueValidator(1),MaxValueValidator(5)])
