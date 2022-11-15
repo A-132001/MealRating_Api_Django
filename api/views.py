@@ -13,7 +13,7 @@ class MealViewset(viewsets.ModelViewSet):
     queryset = MealModel.objects.all()
     serializer_class = MealSerializer
     authentication_classes = (TokenAuthentication,)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (AllowAny,)
     
     @action(methods = ['post'],detail=True)
     def rate_meal(self,request,pk=None):
@@ -56,7 +56,7 @@ class RateViewset(viewsets.ModelViewSet):
     queryset = RateModel.objects.all()
     serializer_class = RateSerializer
     authentication_classes = (TokenAuthentication,)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (AllowAny,)
     
     
     # to override on update and create functions to viewsets
